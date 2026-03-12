@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+<meta charset="UTF-8">
+<title>Feliz Aniversário 🎉</title>
+
+<style>
+
+body{
+margin:0;
+font-family:Arial;
+background:linear-gradient(135deg,#ff758c,#ff7eb3,#fad0c4);
+text-align:center;
+padding:40px 20px;
+overflow-x:hidden;
+}
+
+/* caixa central */
+
+.caixa{
+background:white;
+padding:50px;
+border-radius:25px;
+box-shadow:0 15px 40px rgba(0,0,0,0.3);
+max-width:600px;
+margin:auto;
+}
+
+/* titulo */
+
+h1{
+font-size:40px;
+color:#ff2e63;
+animation:pulse 1.5s infinite;
+}
+
+@keyframes pulse{
+0%{transform:scale(1)}
+50%{transform:scale(1.1)}
+100%{transform:scale(1)}
+}
+
+/* bolo */
+
+.bolo{
+font-size:70px;
+animation:pular 1s infinite alternate;
+}
+
+@keyframes pular{
+from{transform:translateY(0)}
+to{transform:translateY(-15px)}
+}
+
+/* imagem */
+
+img{
+width:260px;
+border-radius:20px;
+margin-top:20px;
+box-shadow:0 10px 25px rgba(0,0,0,0.4);
+transition:transform 0.5s;
+}
+
+img:hover{
+transform:scale(1.05);
+}
+
+/* texto */
+
+p{
+font-size:18px;
+margin-top:20px;
+line-height:1.6;
+}
+
+/* confetes */
+
+.confete{
+position:fixed;
+width:10px;
+height:10px;
+opacity:0.8;
+animation:cair linear infinite;
+}
+
+@keyframes cair{
+0%{
+transform:translateY(-100px) rotate(0deg);
+}
+100%{
+transform:translateY(110vh) rotate(720deg);
+}
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="caixa">
+
+<div class="bolo">🎂</div>
+
+<h1>🎉 Feliz Aniversário! 🎉</h1>
+
+<img src="foto.jpg">
+
+<p>
+Hoje é um dia muito especial!  
+Que sua vida seja cheia de alegria, saúde e sonhos realizados.  
+Parabéns! 🎈🎁
+</p>
+
+<p>
+Obrigado por todos os momentos incríveis, pelos passeios de bicicleta 🚴  
+e por tornar cada dia mais divertido.
+</p>
+
+<p>
+Que venham muitas aventuras, muitos quilômetros pedalados  
+e muitos aniversários felizes juntos!
+</p>
+
+</div>
+
+<script>
+
+const cores = ["red","blue","yellow","green","pink","purple","orange"];
+
+for(let i=0;i<120;i++){
+
+let confete = document.createElement("div");
+
+confete.classList.add("confete");
+
+confete.style.left = Math.random()*100+"vw";
+
+confete.style.background = cores[Math.floor(Math.random()*cores.length)];
+
+confete.style.width = (Math.random()*8+6)+"px";
+
+confete.style.height = confete.style.width;
+
+confete.style.animationDuration = (Math.random()*3+3)+"s";
+
+confete.style.animationDelay = Math.random()*5+"s";
+
+document.body.appendChild(confete);
+
+}
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>Desafio da Bicicleta 🚴</title>
+
+<style>
+
+body{
+font-family:Arial;
+text-align:center;
+background:linear-gradient(135deg,#a1c4fd,#c2e9fb);
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+margin:0;
+}
+
+.caixa{
+background:white;
+padding:40px;
+border-radius:20px;
+box-shadow:0 10px 30px rgba(0,0,0,0.2);
+}
+
+.bike{
+font-size:80px;
+cursor:pointer;
+transition:transform 0.2s;
+}
+
+.bike:hover{
+transform:scale(1.2);
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="caixa">
+
+<h1>🚴 Desafio da Bicicleta</h1>
+
+<p>Clique na bicicleta para pedalar até a surpresa!</p>
+
+<div class="bike" onclick="pedalar()">🚴</div>
+
+<p id="contador">Pedaladas: 0 / 15</p>
+
+</div>
+
+<script>
+
+let pedaladas = 0;
+
+function pedalar(){
+
+pedaladas++;
+
+document.getElementById("contador").innerText =
+"Pedaladas: " + pedaladas + " / 15";
+
+if(pedaladas >= 15){
+
+window.location.href="surpresa.html";
+
+}
+
+}
+
+</script>
+
+</body>
+</html>
